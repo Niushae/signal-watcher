@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import "./globals.css";
+import { ToastProvider } from "./context/ToastContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-gray-900 text-white min-h-screen`}>
-        <header>
-          <Navbar />
-        </header>
-        {children}
+        <ToastProvider>
+          <header>
+            <Navbar />
+          </header>
+          {children}
+        </ToastProvider>
       </body>
     </html>
   );
