@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import WatchlistForm from '../components/WatchlistForm';
 import WatchlistList from '../components/WatchlistList';
 
